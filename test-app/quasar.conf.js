@@ -75,6 +75,15 @@ module.exports = function (ctx) {
       // https: true,
       // port: 8080,
       open: true // opens browser window automatically
+      watchOptions: {
+        ignored: [
+          'node_modules',
+
+          // be sure to change <myextid> below to
+          // your App Extension name:
+          '!node_modules/quasar-app-extension-dotenv2'
+        ]
+      }
     },
 
     // animations: 'all', // --- includes all animations

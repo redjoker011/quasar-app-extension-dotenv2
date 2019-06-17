@@ -54,13 +54,13 @@ module.exports = function (api) {
     let buffer = fs.readFileSync(gitignorePath, 'utf8')
     // convert to array
     let data = buffer.split('\n')
-    // iterate env files
-    envFiles.forEach((envName) => {
-      // See if the .env file already exists in .gitignore
-      if (!data.includes(envName)) {
-        data.push(envName)
-      }
-    })
+
+    envFileMatch = '.env*';
+    // See if the .env file already exists in .gitignore
+    if (!data.includes(envFileMatch)) {
+      data.push(envFileMatch);
+    }
+
     // rejoin array to string
     data = data.join('\n')
     // convert to buffer

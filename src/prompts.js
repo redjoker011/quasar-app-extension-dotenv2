@@ -58,14 +58,6 @@ module.exports = function () {
           name: 'Staging',
           value: 'staging',
         },
-        {
-          name: 'Test',
-          value: 'test',
-        },
-        {
-          name: 'QA',
-          value: 'qa',
-        },
       ],
       validate: (answer) => {
         if (answer.length < 1) {
